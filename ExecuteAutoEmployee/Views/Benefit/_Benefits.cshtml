@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ExecuteAutoEmployee.Models.Benefits>
+
+@foreach (var item in Model)
+{
+    <H5> Basic Benefits </H5>
+    <dl class="dl-horizontal"></dl>
+
+    foreach (var basic in item.BasicBenefits)
+    {
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => basic.BenefitName)
+                </td>
+            </tr>
+        </table>
+    }
+
+    <H5> Additional Benefits </H5>
+    <dl class="dl-horizontal"></dl>
+
+    foreach (var additional in item.AdditionalBenefits)
+    {
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => additional.BenefitName)
+                </td>
+            </tr>
+        </table>
+    }
+}

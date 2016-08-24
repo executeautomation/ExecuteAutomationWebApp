@@ -1,0 +1,45 @@
+﻿@model ExecuteAutoEmployee.Models.Employee
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Company Contribution</title>
+</head>
+<body>
+        <h3>PF Contribution for @Model.Name by Company</h3>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.Label("Company Contribution")
+                </dt>
+
+                <dd>
+                    @ViewBag.EmployerContrib
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Salary)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Grade)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Grade)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+</body>
+</html>

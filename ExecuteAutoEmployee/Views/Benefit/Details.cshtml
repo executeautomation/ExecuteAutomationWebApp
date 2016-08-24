@@ -1,0 +1,25 @@
+﻿@model ExecuteAutoEmployee.Models.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <dl class="dl-horizontal"></dl>
+    </div>
+
+    <h2> Benefits Listed for @Model.Name</h2>
+
+    <p>
+        @Html.Partial("_Benefits", Model.Benefits)
+    </p>
+
+    <p>
+        @Html.ActionLink("Back to List", "Index", "Employee", null, null)
+    </p>
+</body>
+</html>

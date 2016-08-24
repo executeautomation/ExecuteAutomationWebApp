@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityUser>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List of Users</title>
+</head>
+<body>
+    <div>
+        <h3>List of Users</h3>
+    </div>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roles)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var users in Model)
+        {
+            using (Html.BeginForm("AssignRole", "Role"))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => users.UserName)
+                        @Html.Hidden("userName", users.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => users.Email)
+                    </td>
+                    <td>
+                        @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select Role")
+                    </td>
+                    <td>
+                        <input type="submit" value="Assign" class="btn btn-primary" />
+                    </td>
+                </tr>
+                            }
+
+                        }
+    </table>
+
+
+
+</body>
+</html>
