@@ -1,7 +1,7 @@
 # ExecuteAutomationWebApp
 This application is used for automating selenium and coded UI frameworks course
 
-#Automation framework development with Selenium C#
+#Automation framework development with Selenium C sharp
 https://www.udemy.com/framework-development-with-selenium-csharp-advanced
 
 #Advanced framework development with Coded UI Test 2015
@@ -23,3 +23,8 @@ The project will automatically create database for you in the default database s
   </connectionStrings>
 ```
 
+##Troubleshooting
+If the database does not restore for some reasons, then run the database script located in DatabaseScript folder of the repo in SQL Server management studio
+
+####More articles
+For more articles visit http://www.executeautomation.com
