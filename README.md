@@ -29,5 +29,11 @@ If the database does not restore for some reasons, then run the database script 
 ## ExecuteAutomation Employee App running on public Server
 We have deployed ExecuteAutomation Employee App running in public server and it can be accessed from here http://eaapp.somee.com/
 
+### Connection string details
+
+```xml
+workstation id=EAEmployeeDB.mssql.somee.com;packet size=4096;user id=kartmcad_SQLLogin_1;pwd=wtzaxoan1l;data source=EAEmployeeDB.mssql.somee.com;persist security info=False;initial catalog=EAEmployeeDB
+```
+
 ####More articles
 For more articles visit http://www.executeautomation.com
